@@ -1,0 +1,158 @@
+:root {
+    --normal-font: 'Share Tech', sans-serif;
+    --header-font: 'Oswald', sans-serif;
+    --gold: #FFD700;
+}
+
+::selection {
+    color: #030c1c;
+    background-color: var(--gold);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}  
+  
+::-webkit-scrollbar-track {
+    background-color: #030c1c;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--gold); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--normal-font);
+    box-sizing: border-box;
+}
+
+header .navbar .navbar-nav li .nav-link {
+    display: block;
+    width: fit-content;
+    color: var(--bs-white);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border: none;
+    font-family: var(--header-font);
+    position: relative;
+    max-width: max-content;
+}
+
+header .navbar .navbar-nav li .nav-link.active {
+    color: var(--gold);
+}
+
+header .navbar .navbar-nav li .nav-link:hover {
+    color: var(--gold);
+    opacity: .8;
+}
+
+header .navbar .navbar-nav li .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    border-block: 1px solid var(--gold);
+    transform: scaleX(0.2);
+    opacity: 0;
+    transition: .5s;
+}
+
+header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+#carouselExampleFade {
+    margin-top: 10vh;
+    position: relative;
+    height: 70vh;
+}
+
+#carouselExampleFade img{
+    position: relative;
+    z-index: -1;
+    height: 70vh;
+}
+
+.carousel-text {
+    position: absolute;
+    z-index: 1;
+    top: 25vh;
+    left: 25vh;
+    color: #fff;
+    font-family: var(--header-font);
+}
+
+.carousel-text.carousel-black {
+    left: 50%;
+    color: #030c1c;
+}
+
+.section-header {
+    font-family: "Roboto", sans-serif;
+}
+
+.card h5 {
+    font-family: "Roboto", sans-serif;
+}
+
+.card-body .btn {
+    background-color: var(--gold);
+    transition: .1s ease-in-out;
+}
+
+.card-body .btn:hover {
+    opacity: .9;
+}
+
+footer .img-fluid {
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+footer h4 {
+    font-family: var(--header-font);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-top: 1rem;
+    width: fit-content;
+    transition: .2s ease-in;
+}
+
+footer ul li:hover {
+    transform: translateX(20px);
+    color: var(--blue);
+}
+
+footer ul li i:nth-child(2) {
+    font-size: 1.2rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer iframe {
+    width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+    footer .img-fluid {
+        width: 70%;
+        margin: 2rem auto;
+    }
+}

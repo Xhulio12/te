@@ -28,6 +28,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #e9e6ce;
+}
+
 header .navbar .navbar-nav li .nav-link {
     display: block;
     width: fit-content;
@@ -68,34 +72,104 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     opacity: 1;
 }
 
-#carouselExampleFade {
-    margin-top: 10vh;
-    position: relative;
-    height: 70vh;
-}
-
-#carouselExampleFade img{
-    position: relative;
-    z-index: -1;
-    height: 70vh;
-}
-
-.carousel-text {
-    position: absolute;
-    z-index: 1;
-    top: 25vh;
-    left: 25vh;
-    color: #fff;
-    font-family: var(--header-font);
-}
-
-.carousel-text.carousel-black {
-    left: 50%;
-    color: #030c1c;
-}
-
 .section-header {
     font-family: "Roboto", sans-serif;
+}
+
+.main-bg {
+    margin-top: 15vh;
+    background-color: #0b0c08;
+    padding: 2rem 0;
+}
+
+.swiper-slide {
+    color: var(--gold);
+}
+
+.swiper-slide .row {
+    margin: auto;
+} 
+
+.swiper-slide h1 {
+    color: white;
+    margin-left: 10px;
+    text-shadow: 1px 1px 2px black, 0 0 25px var(--gold), 0 0 5px #00008b;
+    animation: showtext 1s ease-in;
+}
+
+.swiper-slide p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-left: 10px;
+    animation: showtext 1.5s ease-in;
+}
+
+
+@keyframes showtext {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.swiper-slide img {
+    margin: 20px 0;
+    height: 70vh;
+    width: 70%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 10px);
+    border-radius: 5px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+
+.staff-pic {
+    height: 30vh;
+    width: 70%;
+    border: 5px solid #0c2b0c;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0;
+}
+
+.orari {
+    font-family: "Shadows Into Light", cursive;
+    color: #721a0c;
+}
+
+.phone-link, .map-link {
+    height: fit-content;
+    text-decoration: none;
+    color: inherit;
+    transition: .3s ease-in-out;
+}
+
+.phone-link {
+    font-size: 3rem;
+}
+
+.phone-link:hover, .phone-link:active, .map-link:hover, .map-link:active {
+    color: #217021;
+}
+
+.map-link {
+    font-size: 1.5rem;
+}
+
+.orari-container {
+    width: 70%;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    background-color: #a8bde7;
 }
 
 .card h5 {
@@ -150,7 +224,30 @@ footer iframe {
     width: 90%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
+    .swiper-slide img {
+        height: 40vh !important;
+    }
+
+    .phone-link {
+        font-size: 2rem;
+    }
+
+    .phone-link img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .map-link img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .orari-container {
+        width: 100%;
+    }
+    
+
     footer .img-fluid {
         width: 70%;
         margin: 2rem auto;

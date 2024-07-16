@@ -172,17 +172,49 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     background-color: #a8bde7;
 }
 
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
 .card h5 {
     font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.list-group-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
 }
 
 .card-body .btn {
     background-color: var(--gold);
-    transition: .1s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .card-body .btn:hover {
-    opacity: .9;
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
 footer .img-fluid {

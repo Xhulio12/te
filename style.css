@@ -74,6 +74,7 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
 
 .section-header {
     font-family: "Roboto", sans-serif;
+    font-weight: 500;
 }
 
 .main-bg {
@@ -82,28 +83,22 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     padding: 2rem 0;
 }
 
-.swiper-slide {
-    color: var(--gold);
-}
-
-.swiper-slide .row {
-    margin: auto;
-} 
-
-.swiper-slide h1 {
-    color: white;
+.main-bg h1 {
+    text-align: center;
+    color: #fff;
     margin-left: 10px;
     text-shadow: 1px 1px 2px black, 0 0 25px var(--gold), 0 0 5px #00008b;
     animation: showtext 1s ease-in;
 }
 
-.swiper-slide p {
-    font-size: 1.3rem;
+.main-bg p {
+    color: var(--gold);
+    text-align: center;
+    font-size: 1.7rem;
     font-weight: 500;
     margin-left: 10px;
     animation: showtext 1.5s ease-in;
 }
-
 
 @keyframes showtext {
     0% {
@@ -117,19 +112,32 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     }
 }
 
-.swiper-slide img {
+.main-bg img {
     margin: 20px 0;
     height: 70vh;
-    width: 70%;
+    width: 100%;
     object-fit: cover;
+    color: var(--gold);
     filter: drop-shadow(0 0 10px);
     border-radius: 5px;
 }
 
-.swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
+.main-bg a {
+    text-decoration: none;
+    color: #c49000;
+    font-size: 1.5rem;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    transition: .2s ease-in-out;
+}
+
+.main-bg a:hover, .main-bg a:active {
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold);
 }
 
 .staff-pic {
@@ -139,6 +147,20 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     border-radius: 50%;
     object-fit: cover;
     object-position: 0;
+}
+
+.booking-appointment {
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin-top: 5px;
+    color: #217021;
+    transition: .1s;
+    border-bottom: 1px solid transparent;
+}
+
+.booking-appointment:hover, .booking-appointment:active {
+    border-bottom: 1px solid #217021;
 }
 
 .orari {
@@ -195,8 +217,6 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     margin-bottom: 0.5rem;
 }
 
-
-
 .list-group-item {
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
@@ -240,7 +260,7 @@ footer ul li {
 
 footer ul li:hover {
     transform: translateX(20px);
-    color: var(--blue);
+    color: var(--gold);
 }
 
 footer ul li i:nth-child(2) {
@@ -257,8 +277,8 @@ footer iframe {
 }
 
 @media only screen and (max-width: 767px) {
-    .swiper-slide img {
-        height: 40vh !important;
+    .booking-appointment {
+        margin: auto;
     }
 
     .phone-link {

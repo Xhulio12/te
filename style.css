@@ -146,7 +146,7 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     border: 5px solid #0c2b0c;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 0;
+    object-position: 0 10%;
 }
 
 .booking-appointment {

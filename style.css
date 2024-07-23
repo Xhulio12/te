@@ -276,6 +276,12 @@ footer iframe {
     width: 90%;
 }
 
+.copyright-footer {
+    background-color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 @media only screen and (max-width: 767px) {
     .booking-appointment {
         margin: auto;

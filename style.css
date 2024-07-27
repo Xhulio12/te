@@ -26,6 +26,8 @@
     padding: 0;
     font-family: var(--normal-font);
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5rem;
 }
 
 body {
@@ -232,14 +234,15 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     letter-spacing: 0.5px;
 }
 
-.card-body .btn:hover {
+.card-body .btn:hover, .card-body .btn:active {
+    background-color: var(--gold);
     opacity: 0.9;
     transform: scale(1.05);
 }
 
 footer .img-fluid {
     display: block;
-    width: 50%;
+    width: 85%;
     margin: 1rem auto;
 }
 
@@ -283,6 +286,10 @@ footer iframe {
 }
 
 @media only screen and (max-width: 767px) {
+    .text-sm-center {
+        text-align: center;
+    }
+
     .booking-appointment {
         margin: auto;
     }
